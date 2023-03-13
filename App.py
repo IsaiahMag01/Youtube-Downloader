@@ -34,6 +34,7 @@ link.pack()
 
 #Download button
 download = customtkinter.CTkButton(app, text="Download", command=startDownload)
+download.pack()
 
 #run app
 app.mainloop()
