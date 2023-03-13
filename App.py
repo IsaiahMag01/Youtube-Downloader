@@ -25,6 +25,9 @@ def on_progress(stream, chunk, bytes_remaining): #Comes from the youtube class i
     pPercentage.configure(text=per + '%')
     pPercentage.update()
 
+    #Update progress bar
+    progressBar.set(float(percentage_of_completion) /100) #Gives us a value between 0 and 1 for our percentage bar to use to fill itself
+
 #System Settings
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
@@ -53,7 +56,7 @@ pPercentage.pack(padx=10, pady=10)
 
 progressBar = customtkinter.CTkProgressBar(app, width=400)
 progressBar.set(0)
-progressBar.pack(padx=10,pady=5)
+progressBar.pack()
 
 
 #Download button
