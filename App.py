@@ -6,12 +6,13 @@ from pytube import YouTube
 def startDownload():
     try:
         ytLink = link.get()
-        ytObject = Youtube(ytLink)
+        ytObject = YouTube(ytLink)
         video = ytObject.streams.get_highest_resolution()
         video.download()
+        print("Download Complete!")
     except:
         print("Youtube link is invalid") #Sends to the consol
-    print("Download Complete!")
+    
 
 
 #System Settings
