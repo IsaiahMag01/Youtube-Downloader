@@ -2,6 +2,7 @@ import tkinter
 import customtkinter
 from pytube import YouTube
 
+#Credit to : https://youtu.be/NI9LXzo0UY0 for idea for base application
 
 def startDownload():
     try:
